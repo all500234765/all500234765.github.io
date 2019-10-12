@@ -25,8 +25,8 @@ facebook_link:
 
 # Footer
 footer_left: "Made with <i class=\"fa fa-heart\"></i> by <a href=\"https://twitter.com/Kriegthepshyco\">Sweet Luna</a>"
-footer_right: "<a href=\"https://github.com/jacobtomlinson/carte-noire\">Carte Noir</a> &nbsp; theme by Jacob Tomlinson<i class=\"fa fa-github-alt\"></i>"
-Carte Noir theme by Jacob Tomlinson
+footer_right: "<a href=\"https://github.com/jacobtomlinson/carte-noire\">Carte Noir</a> &nbsp;theme by Jacob Tomlinson"
+
 # Build settings
 markdown: kramdown
 
