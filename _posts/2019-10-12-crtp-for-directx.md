@@ -3,7 +3,7 @@ layout:     post
 title:      CRTP for DirectX
 date:       2019-10-12 8:00:00
 author:     Kirill Evdakimov
-summary:    Some HLSL 11 Tips
+summary:    Curiously Recurring Template Pattern
 categories: C++
 thumbnail:  heart
 tags:
