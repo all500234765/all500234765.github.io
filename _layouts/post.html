@@ -122,6 +122,8 @@ comments: true
 
       {% if site.disqus_account %}
       <div class="content-panel comments">
+        <a href="{{post.id}}" data-disqus-identifier="{{post.id}}">Leave a comment</a>
+        
         <div id="disqus_thread">
           <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
           <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
@@ -180,9 +182,10 @@ function disqus_config() {
     this.page.url = {{ site.baseurl }}{{ post.url }};
     this.page.title = {{ post.title }};
     
-    {% if post.identifier %}
+    this.page.identifier = {{ page.id }}
+    /*{% if post.identifier %}
         this.page.identifier = {{ post.identifier }};
-    {% endif %}
+    {% endif %}*/
     
     /*{% if post.category_id %}
         this.page.category_id = {{ post.category_id }};
@@ -192,6 +195,7 @@ function disqus_config() {
 }
 
 var disqus_shortname = "{{ site.disqus_account }}"; // required: replace example with your forum shortname
+
 /* * * DON'T EDIT BELOW THIS LINE * * */
 (function() {
   var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
