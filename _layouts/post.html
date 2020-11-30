@@ -176,7 +176,21 @@ comments: true
 {% if site.disqus_account %}
 <script type="text/javascript">
 /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
-function disqus_config() { this.experiment.enable_scroll_container = true; }
+function disqus_config() {
+    this.page.url = {{ site.baseurl }}{{ post.url }};
+    this.page.title = {{ post.title }};
+    
+    {% if post.identifier %}
+        this.page.identifier = {{ post.identifier }};
+    {% endif %}
+    
+    /*{% if post.category_id %}
+        this.page.category_id = {{ post.category_id }};
+    {% endif %}*/
+    
+    this.experiment.enable_scroll_container = true;
+}
+
 var disqus_shortname = "{{ site.disqus_account }}"; // required: replace example with your forum shortname
 /* * * DON'T EDIT BELOW THIS LINE * * */
 (function() {
